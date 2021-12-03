@@ -9,6 +9,10 @@
     "generate": "nuxt generate",
     "test": "jest"
   },
+  "engines": {
+    "node": "16.13.1",
+    "npm": "8.1.2"
+  },
   "dependencies": {
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/apollo": "^4.0.1-rc.5",

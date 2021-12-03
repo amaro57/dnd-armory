@@ -4,7 +4,7 @@ import webpack from 'webpack';
 /** @type { import('@nuxt/types').NuxtConfig } */ 
 const config = {
   server: {
-    port: 3001,
+    port: 3000,
     host: '0.0.0.0'
   },
   publicRuntimeConfig: {
@@ -20,7 +20,7 @@ const config = {
     { path: "/shopifyAdmin", handler: "~/server-middleware/shopify-admin.js"}
   ],
   axios: {
-    baseURL: 'http://172.28.0.1:3001'
+    baseURL: ''
 
   },
   env: {
