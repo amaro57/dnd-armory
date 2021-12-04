@@ -223,7 +223,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="postcss">
 .article-meta h4 a {
   color: #111111;
   font-weight: 600;
@@ -319,7 +319,58 @@ export default {
   }
 }
 
+.call-to-action {
+  background-position: right;
+  margin: var(--spacer-xs) 0;
+  @include for-desktop {
+    margin: var(--spacer-xl) 0 var(--spacer-2xl) 0;
+  }
+}
 
+.sf-arrow {
+  --icon-color: white;
+  &:hover {
+    --button-background: var(--c-dark);
+    --icon-color: var(--c-light);
+    --button-box-shadow-opacity: 0.25;
+  }
+}
+
+.sf-call-to-action {
+  &__title{
+  padding: 10px;
+  background-color: rgba(20, 12, 10, 0.712);
+  }
+}
+
+.sf-call-to-action {
+  &__description {
+    padding: 10px;
+    background-color: rgba(20, 12, 10, 0.712);
+  }
+}
+
+.sf-banner {
+  &__title{
+      color: white;
+  }
+}
+
+.sf-banner {
+  &__description {
+    color: white;
+    padding: 10px;
+  background-color: rgba(20, 12, 10, 0.281);
+  }
+}
+
+.sf-hero-item {
+  &__title{
+    text-align: center;
+    color: white;
+    background-color: rgba(20, 12, 10, 0.281);
+  }
+}
 
 .carousel {
   margin: 0 calc(var(--spacer-sm) * -1) 0 0;
