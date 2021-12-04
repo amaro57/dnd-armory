@@ -346,7 +346,7 @@ export default {
 }
 
 .sf-arrow {
-  --icon-color: white;
+  --icon-color: white !important;
   &:hover {
     --button-background: var(--c-dark);
     --icon-color: var(--c-light);
@@ -356,6 +356,7 @@ export default {
 
 .sf-call-to-action {
   &__title{
+  color: white !important;
   padding: 10px;
   background-color: rgba(20, 12, 10, 0.712);
   }
@@ -363,6 +364,7 @@ export default {
 
 .sf-call-to-action {
   &__description {
+    color: white !important;
     padding: 10px;
     background-color: rgba(20, 12, 10, 0.712);
   }
@@ -370,13 +372,13 @@ export default {
 
 .sf-banner {
   &__title{
-      color: white;
+      color: white !important;
   }
 }
 
 .sf-banner {
   &__description {
-    color: white;
+    color: white !important;
     padding: 10px;
   background-color: rgba(20, 12, 10, 0.281);
   }
@@ -385,7 +387,7 @@ export default {
 .sf-hero-item {
   &__title{
     text-align: center;
-    color: white;
+    color: white !important;
     background-color: rgba(20, 12, 10, 0.281);
   }
 }
@@ -395,6 +397,7 @@ export default {
   @include assign-color-variants(--c-primary, --_c-bluish-primary);
   @include assign-color-variants(--c-primary-variant, --_c-dark-secondary);
   @include assign-color-variants(--c-secondary, --_c-bluish-primary);
-  @include assign-color-variants(--c-success, --_c-bluish-primary)
+  @include assign-color-variants(--c-success, --_c-bluish-primary);
+
 }
 </style>

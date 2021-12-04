@@ -180,7 +180,9 @@ const config = {
         type: 'javascript/auto'
       })
     },
-    extractCSS: false
+    extractCSS: {
+      ignoreOrder: true
+    }
   },
   router: {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
