@@ -261,35 +261,6 @@ export default {
     margin: var(--spacer-xl) auto var(--spacer-2xl);
   }
   .sf-hero-item {
-    &__subtitle {
-    margin: 0;
-    color: var(--c-gray);
-    width: 60%;
-    @include font(
-      --hero-item-subtitle-font,
-      var(--font-weight--normal),
-      var(--h6-font-size),
-      1.4,
-      var(--font-family--secondary)
-    );
-    text-transform: uppercase;
-  }
-  &__title {
-    margin: var(--spacer-xs) 0 0 0;
-    text-align: center;
-    color: white;
-    width: 60%;
-    background-color: rgba(20, 12, 10, 0.281);
-    @include font(
-      --hero-item-title-font,
-      var(--font-weight--semibold),
-      var(--h2-font-size),
-      1.2,
-      var(--font-family--secondary)
-    );
-    letter-spacing: 0.1px;
-    text-transform: none;
-  }
     &:nth-child(even) {
       --hero-item-background-position: left;
       @include for-mobile {
@@ -302,7 +273,6 @@ export default {
       }
     }
   }
-  
 }
 
 ::v-deep .sf-hero__controls {
@@ -356,6 +326,31 @@ export default {
   }
 }
 
+.sf-call-to-action__title {
+  padding: 10px;
+  background-color: rgba(20, 12, 10, 0.712);
+}
+
+.sf-call-to-action__description {
+  padding: 10px;
+  background-color: rgba(20, 12, 10, 0.712);
+}
+
+.sf-banner__title {
+  color: white;
+}
+
+.sf-banner__description {
+  color: white;
+  background-color: rgba(20, 12, 10, 0.281);
+}
+
+.sf-hero-item__title {
+  text-align: center;
+  color: white;
+  background-color: rgba(20, 12, 10, 0.281);
+}
+
 .carousel {
   margin: 0 calc(var(--spacer-sm) * -1) 0 0;
   @include for-desktop {
@@ -371,246 +366,4 @@ export default {
     }
   }
 }
-
-.sf-call-to-action {
-  display: var(--banner-display, flex);
-  box-sizing: border-box;
-  flex-direction: var(--call-to-action-flex-direction, column);
-  align-items: var(--call-to-action-align-items);
-  justify-content: var(--call-to-action-justify-content, left);
-  min-height: var(--call-to-action-height, auto);
-  padding: var(--call-to-action-padding, var(--spacer-lg));
-  @include background(
-    --call-to-action-background,
-    var(--_call-to-action-background-color, transparent),
-    var(--_call-to-action-background-image)
-  );
-  --call-to-action-background-position: 60%;
-  &__text-container {
-    display: flex;
-    justify-content: var(
-      --call-to-action-text-container-justify-content,
-      flex-start
-    );
-    flex-direction: var(--call-to-action-text-container-flex-direction, column);
-    width: var(--call-to-action-text-container-width);
-    margin: var(--call-to-action-text-container-margin);
-  }
-  &__title {
-    margin: var(--call-to-action-title-margin, 0 0 var(--spacer-base) 0);
-    color: var(
-      --call-to-action-color,
-      var(--call-to-action-title-color, var(--c-white))
-    );
-    background-color: rgba(20, 12, 10, 0.712);
-    padding: 10px;
-    @include font(
-      --call-to-action-title-font,
-      var(--font-weight--semibold),
-      var(--h2-font-size),
-      1.4,
-      var(--font-family--secondary)
-    );
-    text-transform: var(--call-to-action-title-text-transform, none);
-  }
-  &__description {
-    margin: var(--call-to-action-description-margin, 0 0 var(--spacer-base) 0);
-    padding: 10px;
-    color: var(
-      --call-to-action-color,
-      var(--call-to-action-description-color, var(--c-white))
-    );
-    background-color: rgba(20, 12, 10, 0.712);
-    @include font(
-      --call-to-action-description-font,
-      var(--font-weight--normal),
-      var(--font-size--base),
-      1.6,
-      var(--font-family--primary)
-    );
-  }
-  @include for-desktop {
-    --call-to-action-description-font-size: var(--font-size--lg);
-    --call-to-action-title-margin: 0 0 var(--spacer-xs) 0;
-    --call-to-action-flex-direction: row;
-    --call-to-action-justify-content: space-between;
-    --call-to-action-align-items: center;
-    --call-to-action-padding: var(--spacer-xl) var(--spacer-2xl);
-    --call-to-action-height: 12.625rem;
-    --call-to-action-text-container-width: 75%;
-  }
-}
-
-.sf-banner {
-  box-sizing: border-box;
-  display: var(--banner-display, flex);
-  justify-content: var(--banner-justify-content, flex-start);
-  width: var(--banner-width, 100%);
-  min-height: var(--banner-height, 21.4375rem);
-  @include background(
-    --banner-background,
-    var(--_banner-background-color, transparent),
-    var(--_banner-background-image)
-  );
-  --banner-background-position: 60%;
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: var(--banner-align-items, flex-start);
-    justify-content: var(--banner-wrapper-justify-content, flex-start);
-    flex-direction: var(--banner-wrapper-flex-direction, column);
-    padding: var(--banner-padding, var(--spacer-xl));
-    flex: 0 0 var(--banner-wrapper-width, 100%);
-    text-decoration: none;
-    &.sf-button,
-    &.sf-button:hover,
-    &.sf-button:active {
-      --button-background: transparent;
-      --button-box-shadow-opacity: 0;
-    }
-  }
-  &__subtitle {
-    margin: var(--banner-subtitle-margin, 0);
-    color: white;
-    @include font(
-      --banner-subtitle-font,
-      var(--font-weight--normal),
-      var(--font-size--base),
-      1.4,
-      var(--font-family--secondary)
-    );
-    text-transform: var(--banner-subtitle-text-transform, uppercase);
-  }
-  &__title {
-    margin: var(--banner-title-margin, var(--spacer-2xs) 0 0 0);
-    color: white;
-    @include font(
-      --banner-title-font,
-      var(--font-weight--normal),
-      var(--h2-font-size),
-      1.4,
-      var(--font-family--secondary)
-    );
-    text-transform: var(--banner-title-text-transform, uppercase);
-  }
-  &__description {
-    display: var(--banner-description-display, none);
-    padding: 10px;
-    margin: var(
-      --banner-description-margin,
-      var(--spacer-sm) 0 var(--spacer-base) 0
-    );
-    color: white;
-    background-color: rgba(20, 12, 10, 0.281);
-    text-align: var(--banner-description-text-align, left);
-    @include font(
-      --banner-description-font,
-      var(--font-weight--light),
-      var(--font-size--base),
-      1.6,
-      var(--font-family--primary)
-    );
-  }
-  &__call-to-action {
-    --button-color: var(--c-light-variant);
-    display: var(--banner-display-call-to-action, none);
-  }
-  @include for-desktop {
-    --banner-background-image: var(
-      --_banner-background-desktop-image,
-      var(--_banner-background-image)
-    );
-    --banner-wrapper-width: 50%;
-    --banner-description-display: block;
-    --banner-display-call-to-action: block;
-    --banner-title-margin: var(--spacer-sm) 0 0 0;
-    --banner-subtitle-color: var(--c-gray);
-    align-items: var(--banner-align-items, center);
-    min-height: var(--banner-height, 25rem);
-    &__wrapper {
-      pointer-events: none;
-      & > * {
-        pointer-events: initial;
-      }
-    }
-    &__call-to-action {
-      --button-padding: var(--spacer-sm) var(--spacer-xl);
-      pointer-events: auto;
-    }
-    &--right {
-      --banner-justify-content: flex-end;
-    }
-  }
-}
-
-.sf-arrow {
-  --button-width: 2.75rem;
-  --button-height: 2.75rem;
-  --button-padding: 0 0.625rem;
-  --button-background: var(--c-light);
-  --button-transition: background 150ms linear;
-  --icon-color: white;
-  --button-box-shadow: 0px 4px 4px var(--c-black);
-  --box-shadow-transition-opacity-duration: 150ms;
-  display: flex;
-  align-items: center;
-  justify-content: var(--arrow-justify-content, center);
-  &:hover {
-    --button-background: var(--c-dark);
-    --icon-color: var(--c-light);
-    --button-box-shadow-opacity: 0.25;
-  }
-  &:active {
-    --button-background: var(--c-link);
-  }
-  &:disabled {
-    --button-background: var(--c-light);
-    --icon-color: var(--c-text-disabled);
-  }
-  &__icon {
-    transform: var(--arrow-icon-transform);
-  }
-  &--long {
-    --button-width: 4.375rem;
-    --button-height: 2.5rem;
-    --button-background: var(--c-text-disabled);
-    --button-transition: transform 150ms linear;
-    --arrow-justify-content: flex-start;
-    &.sf-arrow--right {
-      --arrow-justify-content: flex-end;
-      --arrow-icon-transform: rotate(180deg) scale(0.855, 0.75);
-      &:hover {
-        transform-origin: center right;
-      }
-    }
-  }
-  &--transparent {
-    --button-background: transparent;
-    --button-box-shadow: none;
-    &:hover {
-      --button-background: transparent;
-      --icon-color: var(--c-dark);
-    }
-    &:disabled {
-      --button-background: transparent;
-      --icon-color: var(--c-text-disabled);
-    }
-  }
-  &--rounded {
-    --button-border-radius: 100%;
-  }
-  &--no-shadow {
-    --button-box-shadow: none;
-  }
-  &--right {
-    --arrow-icon-transform: rotate(180deg);
-  }
-  &--top {
-    --arrow-icon-transform: rotate(90deg);
-  }
-  &--down {
-    --arrow-icon-transform: rotate(270deg);
-  }
-}
-
 </style>
