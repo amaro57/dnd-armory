@@ -223,7 +223,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="postcss">
 .article-meta h4 a {
   color: #111111;
   font-weight: 600;
@@ -319,6 +319,24 @@ export default {
   }
 }
 
+.carousel {
+  margin: 0 calc(var(--spacer-sm) * -1) 0 0;
+  @include for-desktop {
+    margin: 0;
+  }
+  &__item {
+    margin: 1.375rem 0 2.5rem 0;
+    @include for-desktop {
+      margin: var(--spacer-xl) 0 var(--spacer-xl) 0;
+    }
+    &__product {
+      --product-card-add-button-transform: translate3d(0, 30%, 0);
+    }
+  }
+}
+
+</style>
+<style lang="scss">
 .call-to-action {
   background-position: right;
   margin: var(--spacer-xs) 0;
@@ -369,22 +387,6 @@ export default {
     text-align: center;
     color: white;
     background-color: rgba(20, 12, 10, 0.281);
-  }
-}
-
-.carousel {
-  margin: 0 calc(var(--spacer-sm) * -1) 0 0;
-  @include for-desktop {
-    margin: 0;
-  }
-  &__item {
-    margin: 1.375rem 0 2.5rem 0;
-    @include for-desktop {
-      margin: var(--spacer-xl) 0 var(--spacer-xl) 0;
-    }
-    &__product {
-      --product-card-add-button-transform: translate3d(0, 30%, 0);
-    }
   }
 }
 
