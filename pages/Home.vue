@@ -10,6 +10,7 @@
         :background="hero.background"
         :image="hero.image"
         :class="hero.className"
+        class="test"
       />
     </SfHero>
     <LazyHydrate when-visible>
@@ -222,7 +223,7 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style lang="scss" >
 .article-meta h4 a {
   color: #111111;
   font-weight: 600;
@@ -326,29 +327,49 @@ export default {
   }
 }
 
-.sf-call-to-action__title {
+.sf-arrow {
+  --icon-color: white;
+  &:hover {
+    --button-background: var(--c-dark);
+    --icon-color: var(--c-light);
+    --button-box-shadow-opacity: 0.25;
+  }
+}
+
+.sf-call-to-action {
+  &__title{
   padding: 10px;
   background-color: rgba(20, 12, 10, 0.712);
+  }
 }
 
-.sf-call-to-action__description {
-  padding: 10px;
-  background-color: rgba(20, 12, 10, 0.712);
+.sf-call-to-action {
+  &__description {
+    padding: 10px;
+    background-color: rgba(20, 12, 10, 0.712);
+  }
 }
 
-.sf-banner__title {
-  color: white;
+.sf-banner {
+  &__title{
+      color: white;
+  }
 }
 
-.sf-banner__description {
-  color: white;
+.sf-banner {
+  &__description {
+    color: white;
+    padding: 10px;
   background-color: rgba(20, 12, 10, 0.281);
+  }
 }
 
-.sf-hero-item__title {
-  text-align: center;
-  color: white;
-  background-color: rgba(20, 12, 10, 0.281);
+.sf-hero-item {
+  &__title{
+    text-align: center;
+    color: white;
+    background-color: rgba(20, 12, 10, 0.281);
+  }
 }
 
 .carousel {
@@ -365,5 +386,13 @@ export default {
       --product-card-add-button-transform: translate3d(0, 30%, 0);
     }
   }
+}
+
+:root{
+  @include generate-color-variants(--_c-bluish-primary, #5989a1);
+  @include assign-color-variants(--c-primary, --_c-bluish-primary);
+  @include assign-color-variants(--c-primary-variant, --_c-dark-secondary);
+  @include assign-color-variants(--c-secondary, --_c-bluish-primary);
+  @include assign-color-variants(--c-success, --_c-bluish-primary)
 }
 </style>
