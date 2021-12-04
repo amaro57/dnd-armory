@@ -223,7 +223,7 @@ export default {
 };
 </script>
 
-<style lang="postcss">
+<style lang="scss">
 .article-meta h4 a {
   color: #111111;
   font-weight: 600;
