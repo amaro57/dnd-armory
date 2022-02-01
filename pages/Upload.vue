@@ -1,55 +1,55 @@
 <template>
-	<div id="sketchfab-asset">
-		<form class="form">
-			<SfInput 
+  <div id="sketchfab-asset">
+    <form class="form">
+      <SfInput 
         v-model='productName'
-				label="Product Name"
-				name="productName"
-				class="form__element"
-				required
-				error-message=""
-			/>
-			<SfTextarea
+        label="Product Name"
+        name="productName"
+        class="form__element"
+        required
+        error-message=""
+      />
+      <SfTextarea
         v-model='productDescription'
-				label="Description"
-				name="description"
+        label="Description"
+        name="description"
         class="form__element"
         cols="60"
         rows="10"
-				wrap="soft"
+        wrap="soft"
         maxlength="500"
-				placeholder="Enter a description for your product."
-				required
-			/>
+        placeholder="Enter a description for your product."
+        required
+      />
       <SfSelect
         v-model='productCategory'
-				label="Product Category"
-				name="productCat"
+        label="Product Category"
+        name="productCat"
         class="form__element"
         cols="60"
         rows="10"
-				wrap="soft"
+        wrap="soft"
         maxlength="500"
-				placeholder="Select a category for your product."
-				required
-			>
+        placeholder="Select a category for your product."
+        required
+      >
         <SfSelectOption value="Weapons">Weapons</SfSelectOption>
         <SfSelectOption value="Armor">Armor</SfSelectOption>
         <SfSelectOption value="Magic">Magic</SfSelectOption>
         <SfSelectOption value="Creatures">Creatures</SfSelectOption>
         <SfSelectOption value="Environment">Environment</SfSelectOption>
       </SfSelect>
-			
-			<div id="sketchfabid">
-				<SfInput
+      
+      <div id="sketchfabid">
+        <SfInput
           v-model='sketchfabuid'
-					label="Model UID"
-					name="sketchfabuid"
-					class="form__element"
-					required
-					error-message=""
-				/>
-			</div>
+          label="Model UID"
+          name="sketchfabuid"
+          class="form__element"
+          required
+          error-message=""
+        />
+      </div>
       <div class="dropbox">
           <input 
             type="file" 
@@ -64,8 +64,8 @@
         <SfButton type="submit" @click.prevent="submit">Submit</SfButton>
         
       </div>
-		</form>
-	</div>
+    </form>
+  </div>
 </template>
 <script>
 import {
@@ -78,15 +78,15 @@ SfSelect
 } from '@storefront-ui/vue';
 
 export default {
-	name: 'Upload',
-	components: {
-		SfInput,
-		SfComponentSelect,
-		SfTextarea,
-		SfCheckbox,
+  name: 'Upload',
+  components: {
+    SfInput,
+    SfComponentSelect,
+    SfTextarea,
+    SfCheckbox,
     SfButton,
     SfSelect
-	},
+  },
   props: {
     /*prodName: String,
     prodDescrip: String,
@@ -103,7 +103,7 @@ export default {
       file:''
     }
   },
-	methods: {
+  methods: {
     fileChanged() {
       const file = this.$refs.file.files[0];
       this.file = file;
@@ -156,13 +156,13 @@ export default {
 /*
 <SfCheckbox
         v-model='sketchAsset'
-				name="3dcheck"
-				label="Is this a Sketchfab 3D asset?"
+        name="3dcheck"
+        label="Is this a Sketchfab 3D asset?"
         class="form__element"
         valid
         :disabled="false"
         :selected="true"
-			/>
+      />
 */
 </script>
 <style lang="scss" scoped>
