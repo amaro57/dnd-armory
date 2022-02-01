@@ -16,7 +16,7 @@ app.post('/shopifyAdmin', (req, res) => {
     sketchfabuid: req.body.sketchfabuid,
     productImage: req.body.productImage
   };
-  
+  //Move Access tokens to non-public facing files. Security hazard in non-private projects.
   axios({
     method: 'post',
     url: 'https://dnd-armory.myshopify.com/admin/api/2021-10/products.json',
