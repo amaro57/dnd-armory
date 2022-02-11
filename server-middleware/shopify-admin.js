@@ -22,7 +22,7 @@ app.post('/shopifyAdmin', (req, res) => {
     url: 'https://dnd-armory.myshopify.com/admin/api/2021-10/products.json',
     headers: {
       'Content-Type': 'application/json',
-      'X-Shopify-Access-Token': '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'
+      'X-Shopify-Access-Token': ''
     },
     data: JSON.stringify({
       "product": {
@@ -40,7 +40,7 @@ app.post('/shopifyAdmin', (req, res) => {
       url: 'https://dnd-armory.myshopify.com/admin/api/2021-10/product_listings/'+ id +'.json',
       headers: {
         'Content-Type': 'application/json',
-        'X-Shopify-Access-Token': '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'
+        'X-Shopify-Access-Token': ''
       },
       data: JSON.stringify({
         "product_listing": {
@@ -61,7 +61,7 @@ app.post('/adminMeta', (req, res) => {
     url: 'https://dnd-armory.myshopify.com/admin/api/2021-10/graphql.json',
     headers: {
       'Content-Type': 'application/json',
-      'X-Shopify-Access-Token': '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'
+      'X-Shopify-Access-Token': ''
     },
     data: {
       query: `
